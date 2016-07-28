@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="code" />
+<meta name="description" content="code" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>code</title>
+</head>
+<body>
+	<div class="pic_code">
+        <div class="pic_bao">
+            <div class="pic"><img src="img/1.jpg" alt="图片" /></div>   
+            <div class="pic_loading"><img src="img/pic_loading.gif" alt="图片" /></div>
+        </div>
+        <div class="refresh">点击刷新验证码</div>
+        <div class="line_bao">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="success">验证成功</div>
+        <div class="pic_mask">×</div>
+    </div>
+</body>
+<script type="text/javascript" src="inc/jquery.min.js"></script>
+<script type="text/javascript" src="jq/pic_code.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var opt = {
+		    div_width: 260,//设置大图的默认宽
+		    div_height: 160,//设置大图的默认高
+		    crop_div: 50, // 设置移动的小图片的宽高
+		    valid_range: 5, // 图片验证正确的容错范围，默认是5
+		    unit: "px", // 宽高及容错范围单位 "px|vw", 默认px，且IE6/7/8强制使用px
+		    background_url: ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"], // 大图路径，数组
+		    Callback_error_repeatedly_count: 3 // 触发多次验证失败回调的失败次数
+		}
+		pic_code.init(opt)
+	})
+</script>
+</html>
